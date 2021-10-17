@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Anime Kitsu</title>
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+          <link rel="stylesheet" href="C:\Users\Ania\Desktop\ANIME API project\style.css">
+</head>
+
+<body>
+          <div class="display">
+
+                    <h1><span>Explore Anime | Kitsu</span></h1>
+                    <h2>Share anime and manga experiences, get recommendations and see what friends are watching or
+                              reading. </h2>
+
+                    <p><label for="options">Search by:</label></p>
+                    <select name="options" id="options">
+                              <option value="text">Name</option>
+                              <option value="categories">Category</option>
+                    </select>
+
+                    <div class="container">
+                              <div class="item">
+                                        <p> By name: Naruto | One Piece | Attack on Titan | Demon Slayer |
+                                                  Death
+                                                  note | Sword Art Online |
+                                                  Code Geass | Fullmetal Alchemist | Bleach | Steins Gate | Jujustsu
+                                                  Kaisen |
+                                                  Black Clover |
+                                                  Hunter x Hunter | Gintama | </p>
+                              </div>
+                              <div class="item">
+                                        <p> By category: Comedy |Fantasy |Romance |Action |School |Life
+                                                  |Drama |Adventure |Earth |Thriller|Horror |Psychological
+                                                  |Shounen |Ai |Supernatural |Martial Arts |Super Power |Shounen |Demon
+                                                  |Seinen | Science | Fiction
+                                        </p>
+                              </div>
+                    </div>
+
+                    <form id="apiForm">
+                              <input type="text" name="search" placeholder="Type here" id="search">
+                              <button id="click" type="submit" name="button">Search</button>
+
+                    </form>
+
+
+
+          </div>
+
+          <div class="results"></div>
+
+
+
+          <script src="C:\Users\Ania\Desktop\ANIME API project\app.js"></script>
+
+
+
+</body>
+
+</html>

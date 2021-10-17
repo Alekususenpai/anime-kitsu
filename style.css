@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  background-color: rgba(235, 179, 235, 0.233);
+}
+
+.display {
+  text-align: center; 
+  background-image: url('Konachan.png');
+  border-radius: 1em;
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-size:cover; 
+  height: 85vh;
+  width: 90vw;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 1em;
+}
+ 
+
+h1 {
+  padding-top: 3.8em;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h1 span {
+  background-color: rgba(235, 219, 235, 0.315);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.2em;
+  background-color: rgba(240, 204, 240, 0.425); 
+  border-radius: 0.5em;
+  padding: 0.2em;
+}
+
+p {
+  font-size: 1rem;
+}
+
+
+.container {
+  margin: 0.8em auto;
+  padding: 0.2em;
+  width: 70vw;
+  background-color: rgba(235, 219, 235, 0.315);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5em;
+}
+
+.item {
+flex-basis: 45%;
+text-align: justify;
+
+}
+
+select[name='options'] {
+  font-size: 1rem;
+  padding: 0.5em 2em;  
+  border-radius: 0.5em;
+  border-color: rgb(172, 98, 110);
+  outline: none;
+  margin: 0.6em auto;
+}
+
+input[name='search'] {
+  font-size: 1rem;
+  padding: 0.6em 2em; 
+  border-radius: 0.5em;
+  border-color: pink;
+  outline: none;
+text-align: center;
+}
+
+#click {
+  display: block;
+  padding: 0.6em 1.9em; 
+  letter-spacing: 0.1em;
+  background-color: rgb(41, 7, 32); 
+  color: white; 
+  border-radius: 0.8em; 
+  margin: auto;
+  margin-top: 1.5em;
+  font-size: 1rem;
+}
+
+#click:hover{
+  background-color: rgb(83, 16, 65);
+  letter-spacing: 0.2em;
+}
+
+/* Container for flexboxes */
+.results {
+  background-color: rgba(240, 240, 245, 0.925);
+  width: 90vw;
+  margin: auto;
+  border: 2px solid rgba(255, 192, 203, 0.37);
+  border-radius: 0.7em;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Create four equal columns */
+.column {
+  flex: 25%;
+  padding: 30px;
+  word-wrap: break-word;
+  border-radius: 0.7em;
+}
+
+
+.column img {
+    border-radius: 1em;
+}
+
+
+
+
+@media screen and (max-width: 1270px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+  h1 {
+    padding-top: 2.5em;
+    font-size: 2.1rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  .display {
+    overflow: scroll;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em;
+  }
+  .item{
+    padding: 1em;
+  }
+}  
