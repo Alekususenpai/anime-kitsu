@@ -4,11 +4,28 @@ const optionSelected = document.getElementById('options').value;
 const option = document.getElementById('options');
 const button = document.querySelector('#click');
 
+option.addEventListener('change', () => {
+          const search = document.getElementById('search');
+          const optionSelected = document.getElementById('options').value;
+          if (optionSelected === 'categories') {
+                    search.setAttribute('placeholder', 'Searching by category');
+          } else { search.setAttribute('placeholder', 'Searching by name'); }
+})
 
 
-apiForm.addEventListener('submit', function (event) {
+
+apiForm.addEventListener('submit', (event) => {
           event.preventDefault()
-          searchAnime()
+          const searchTerm = document.getElementById('search').value;
+          const search = document.getElementById('search');
+          if (searchTerm === '') {
+                    search.classList.add('shake');
+                    setTimeout(() => {
+                              search.classList.remove('shake');
+                    }, 1000);
+          } else {
+                    searchAnime()
+          }
 })
 
 
@@ -63,6 +80,8 @@ function searchAnime() {
                                         div.appendChild(divContainer);
 
                                         document.getElementById("search").value = ''
+
+                                        div.scrollIntoView({ behavior: "smooth" });
                               }
                     }).catch(err => {
                               console.log('Encountered a mistake, check code', err)
@@ -74,4 +93,4 @@ function cleanUp() {
 
 }
 
-// fix this show/hide shit - erase old results - show more results *
+// erase old results - show more results 
